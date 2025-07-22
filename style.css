@@ -23,12 +23,29 @@ img{
 }
 
 /* custom style */
+
+@keyframes banner-animation{
+    0%{
+        opacity: 0;
+        transform: translateX(-20px);
+    }
+    50%{
+        opacity: 0.5;
+        transform: translateX(-10px);
+    }
+    100%{
+        opacity: 1;
+         transform: translateX(0px);
+    }
+    }
+
 .banner{
     display: flex;
     align-items: center;
     background-color: black;
     color: white;
     margin: 50px auto;
+    animation: banner-animation 1s ease-out forwards;
 }
 .banner h2{
     font-weight: bold;
@@ -119,6 +136,9 @@ img{
 /* laptop */
 
 @media screen  and (max-width:992px) {
+    .container{
+        margin: 0 20px;
+    }
 
     /* banner */
     .banner h2{
@@ -148,6 +168,9 @@ img{
 
 /* mobile */
 @media (max-width:568px) {
+    .container{
+        margin: 0 10px;
+    }
     .banner{
         flex-direction: column;
         text-align: center;
@@ -160,6 +183,9 @@ img{
     .banner .banner-left p{
         /* max-width: 100%; */
         margin: 15px auto;
+    }
+    .upcoming-matches-right{
+        grid-template-columns: 1fr;
     }
     
 }
